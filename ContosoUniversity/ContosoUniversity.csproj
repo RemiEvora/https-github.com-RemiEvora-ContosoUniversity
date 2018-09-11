@@ -159,7 +159,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="DAL\SchoolConfiguration.cs" />
     <Compile Include="DAL\SchoolContext.cs" />
@@ -175,12 +178,42 @@
     <Compile Include="Migrations\201809101829131_InitialCreate.Designer.cs">
       <DependentUpon>201809101829131_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809101906025_MaxLengthOnNames.cs" />
+    <Compile Include="Migrations\201809101906025_MaxLengthOnNames.Designer.cs">
+      <DependentUpon>201809101906025_MaxLengthOnNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809101910153_ColumnFirstName.cs" />
+    <Compile Include="Migrations\201809101910153_ColumnFirstName.Designer.cs">
+      <DependentUpon>201809101910153_ColumnFirstName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809111322322_ComplexDataModel.cs" />
+    <Compile Include="Migrations\201809111322322_ComplexDataModel.Designer.cs">
+      <DependentUpon>201809111322322_ComplexDataModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809111537395_DepartmentSP.cs" />
+    <Compile Include="Migrations\201809111537395_DepartmentSP.Designer.cs">
+      <DependentUpon>201809111537395_DepartmentSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809111547055_RowVersion.cs" />
+    <Compile Include="Migrations\201809111547055_RowVersion.Designer.cs">
+      <DependentUpon>201809111547055_RowVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809111619407_Inheritance.cs" />
+    <Compile Include="Migrations\201809111619407_Inheritance.Designer.cs">
+      <DependentUpon>201809111619407_Inheritance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Enrollment.cs" />
-    <Compile Include="Models\Models.cs" />
+    <Compile Include="Models\Instructor.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\OfficeAssignment.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AssignedCourseData.cs" />
     <Compile Include="ViewModels\EnrollmentDateGroup.cs" />
+    <Compile Include="ViewModels\InstructorIndexData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -227,6 +260,21 @@
     <Content Include="Views\Student\Details.cshtml" />
     <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Course\Create.cshtml" />
+    <Content Include="Views\Course\Delete.cshtml" />
+    <Content Include="Views\Course\Details.cshtml" />
+    <Content Include="Views\Course\Edit.cshtml" />
+    <Content Include="Views\Course\Index.cshtml" />
+    <Content Include="Views\Instructor\Create.cshtml" />
+    <Content Include="Views\Instructor\Delete.cshtml" />
+    <Content Include="Views\Instructor\Details.cshtml" />
+    <Content Include="Views\Instructor\Edit.cshtml" />
+    <Content Include="Views\Instructor\Index.cshtml" />
+    <Content Include="Views\Department\Create.cshtml" />
+    <Content Include="Views\Department\Delete.cshtml" />
+    <Content Include="Views\Department\Details.cshtml" />
+    <Content Include="Views\Department\Edit.cshtml" />
+    <Content Include="Views\Department\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -247,6 +295,24 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201809101829131_InitialCreate.resx">
       <DependentUpon>201809101829131_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809101906025_MaxLengthOnNames.resx">
+      <DependentUpon>201809101906025_MaxLengthOnNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809101910153_ColumnFirstName.resx">
+      <DependentUpon>201809101910153_ColumnFirstName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809111322322_ComplexDataModel.resx">
+      <DependentUpon>201809111322322_ComplexDataModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809111537395_DepartmentSP.resx">
+      <DependentUpon>201809111537395_DepartmentSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809111547055_RowVersion.resx">
+      <DependentUpon>201809111547055_RowVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809111619407_Inheritance.resx">
+      <DependentUpon>201809111619407_Inheritance.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
